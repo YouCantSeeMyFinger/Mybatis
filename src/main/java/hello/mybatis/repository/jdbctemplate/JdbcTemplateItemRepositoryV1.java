@@ -28,6 +28,7 @@ public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
 
     public JdbcTemplateItemRepositoryV1(DataSource dataSource) {
         // JdbcTemplate의 경우 DataSource가 필요하다.
+        // config 에 설정파일을 정의해두었다.
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 

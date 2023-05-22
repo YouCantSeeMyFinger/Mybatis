@@ -9,6 +9,11 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Optional;
 
+
+/**
+ * MybatisItemRepository에 주입해줄 것이다.
+ *
+ */
 @Mapper
 public interface ItemMapper {
 

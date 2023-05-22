@@ -13,9 +13,8 @@
         update Item
         set item_name = #{updateParam.itemName},
             price     = #{updateParam.price},
-            quantity  = #{updateParam.quantity};
-        where id =
-        #{id}
+            quantity  = #{updateParam.quantity}
+        where id = #{id}
     </update>
 
     <!-- resultType = "hello.mybatis.domain"이다 . applicationproperties에 보면
@@ -44,17 +43,15 @@
         -- 만약 조건에 충족하는 if태그가 하나라도 있다고 하면 and에 작성해둔 조건이 쿼리에 들어간다.
 
         <where>
-            -- 아이템 검색 조건으로 빈 공백 && null값이 들어오지 않는 경우
+            -- 아이템 검색 조건으로 빈 공백 null값이 들어오지 않는 경우
             -- 그리고
             -- item_name에 itemSearchCond.itemName이 처음 , 끝 , 중간에 itemName에 들어간 경우
             <if test="itemName != null and itemName != ''">
-                and item_name like concat('%' , #{itemName} , '%');
+                and item_name like concat('%' ,#{itemName}, '%')
             </if>
 
             <if test="maxPrice != null">
-                <![CDATA[
-                    and price <= #{maxPrice}
-                ]]>
+                and price &lt;= #{maxPrice}
             </if>
         </where>
     </select>

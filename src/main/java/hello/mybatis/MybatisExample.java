@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 //@Import(JdbcTemplateConfigV1.class)
 //@Import(JdbcTemplateConfigV2.class)
 @Log4j2
-@Import(JdbcTemplateConfigV3.class)
+@Import(MybatisConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.mybatis.web")
 public class MybatisExample {
 

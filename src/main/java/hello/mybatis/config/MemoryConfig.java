@@ -7,6 +7,10 @@ import hello.mybatis.service.ItemServiceV1;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+/**
+ * MybatisExample에서 Import 설정해줘야한다.
+ */
 @Configuration
 public class MemoryConfig {
 

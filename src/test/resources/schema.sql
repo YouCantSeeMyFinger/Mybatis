@@ -1,3 +1,5 @@
+-- 이 파일을 만들어 놓은 이유는 h2 db를 임베디드 모드로 사용할 때 db연결을 직접 하지 않고 (db연결이 끊어져있을 때 ) 테스트하기위해서 만들어놓았다.
+
 drop table if exists item cascade;
 
 create table item
